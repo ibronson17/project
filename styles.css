@@ -1,20 +1,124 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
+    color: #333;
     line-height: 1.6;
+    background: linear-gradient(to bottom, #004d40, #a7ffeb);
     margin: 0;
     padding: 0;
 }
 
+/* Header */
 header {
     background: #004d40;
     color: white;
     text-align: center;
     padding: 1em 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 header h1 {
-    margin: 0;
+    font-size: 2.5em;
+    margin-bottom: 0.2em;
+    font-family: 'Verdana', sans-serif;
+    letter-spacing: 2px;
 }
 
 nav {
-    margin
+    margin-top: 1em;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    margin: 0 15px;
+    padding: 0.5em;
+    transition: background 0.3s, color 0.3s;
+}
+
+nav a:hover {
+    background: #a7ffeb;
+    color: #004d40;
+    border-radius: 5px;
+}
+
+/* Main Content */
+main {
+    max-width: 1200px;
+    margin: 2em auto;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+}
+
+/* Section Styling */
+section {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+    padding: 2em;
+    width: 80%;
+    max-width: 900px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+section:hover {
+    transform: scale(1.03);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+section h2 {
+    color: #004d40;
+    font-size: 1.8em;
+    margin-bottom: 0.5em;
+    font-family: 'Georgia', serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+section p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background: #004d40;
+    color: white;
+    padding: 1em 0;
+    margin-top: 2em;
+}
+
+footer p {
+    font-size: 0.9em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav a {
+        font-size: 1em;
+    }
+
+    section {
+        width: 90%;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+}
+
